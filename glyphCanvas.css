@@ -1,0 +1,317 @@
+/**
+ * 🌸 Glyph Constellation Canvas Styles
+ * Sacred geometry aesthetics for The Grove's interactive glyph interface
+ */
+
+/* Constellation Container */
+.glyph-constellation-container {
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* SVG Canvas */
+.glyph-constellation-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
+}
+
+/* Background Pattern */
+.constellation-background {
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.glyph-constellation-container:hover .constellation-background {
+    opacity: 0.5;
+}
+
+/* Glyph Groups */
+.glyph-group {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.glyph-group:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+}
+
+.glyph-group.active {
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.6));
+}
+
+/* Seasonal Auras */
+.seasonal-aura {
+    transition: all 0.5s ease;
+    opacity: 0.6;
+}
+
+.seasonal-aura-spring {
+    stroke: #4ade80;
+    stroke-dasharray: 5,5;
+    animation: springPulse 4s ease-in-out infinite;
+}
+
+.seasonal-aura-summer {
+    stroke: #fbbf24;
+    stroke-dasharray: 8,8;
+    animation: summerPulse 3s ease-in-out infinite;
+}
+
+.seasonal-aura-autumn {
+    stroke: #f97316;
+    stroke-dasharray: 6,6;
+    animation: autumnPulse 5s ease-in-out infinite;
+}
+
+.seasonal-aura-winter {
+    stroke: #60a5fa;
+    stroke-dasharray: 4,4;
+    animation: winterPulse 6s ease-in-out infinite;
+}
+
+/* Glyph Sigils */
+.glyph-sigil {
+    fill: #ffffff;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+    transition: all 0.3s ease;
+}
+
+.glyph-group:hover .glyph-sigil {
+    fill: #fbbf24;
+    filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.6));
+}
+
+.glyph-group.active .glyph-sigil {
+    fill: #fbbf24;
+    filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.8));
+}
+
+/* Glyph Names */
+.glyph-name {
+    fill: #d1d5db;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+}
+
+.glyph-group:hover .glyph-name {
+    fill: #ffffff;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Interaction Areas */
+.glyph-interaction-area {
+    transition: all 0.2s ease;
+}
+
+.glyph-interaction-area:hover {
+    fill: rgba(255, 255, 255, 0.1);
+}
+
+/* Tooltips */
+.glyph-tooltip {
+    background: rgba(17, 24, 39, 0.95);
+    border: 1px solid rgba(75, 222, 128, 0.3);
+    border-radius: 8px;
+    padding: 16px;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    max-width: 300px;
+    z-index: 1000;
+}
+
+.tooltip-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(75, 222, 128, 0.2);
+}
+
+.tooltip-sigil {
+    font-size: 24px;
+    filter: drop-shadow(0 0 8px rgba(75, 222, 128, 0.4));
+}
+
+.tooltip-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #4ade80;
+}
+
+.tooltip-details {
+    margin-bottom: 12px;
+}
+
+.tooltip-details div {
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tooltip-details strong {
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+.tooltip-description {
+    font-style: italic;
+    color: #d1d5db;
+    line-height: 1.6;
+}
+
+/* Seasonal Mode Controls */
+.seasonal-controls {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+}
+
+.seasonal-button {
+    background: rgba(17, 24, 39, 0.8);
+    border: 1px solid rgba(75, 222, 128, 0.3);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.seasonal-button:hover {
+    background: rgba(75, 222, 128, 0.2);
+    border-color: rgba(75, 222, 128, 0.6);
+}
+
+.seasonal-button.active {
+    background: rgba(75, 222, 128, 0.3);
+    border-color: rgba(75, 222, 128, 0.8);
+}
+
+/* Constellation Info */
+.constellation-info {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background: rgba(17, 24, 39, 0.8);
+    border: 1px solid rgba(75, 222, 128, 0.3);
+    border-radius: 6px;
+    padding: 12px;
+    color: #ffffff;
+    font-size: 12px;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.constellation-info div {
+    margin-bottom: 4px;
+}
+
+.constellation-info strong {
+    color: #4ade80;
+}
+
+/* Animations */
+@keyframes springPulse {
+    0%, 100% { opacity: 0.4; stroke-width: 3; }
+    50% { opacity: 0.8; stroke-width: 4; }
+}
+
+@keyframes summerPulse {
+    0%, 100% { opacity: 0.5; stroke-width: 3; }
+    50% { opacity: 1; stroke-width: 5; }
+}
+
+@keyframes autumnPulse {
+    0%, 100% { opacity: 0.3; stroke-width: 3; }
+    50% { opacity: 0.7; stroke-width: 4; }
+}
+
+@keyframes winterPulse {
+    0%, 100% { opacity: 0.4; stroke-width: 3; }
+    50% { opacity: 0.9; stroke-width: 4; }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .glyph-constellation-container {
+        height: 400px;
+    }
+    
+    .glyph-constellation-svg {
+        viewBox: "0 0 600 400";
+    }
+    
+    .seasonal-controls {
+        top: 8px;
+        right: 8px;
+    }
+    
+    .constellation-info {
+        bottom: 8px;
+        left: 8px;
+        font-size: 11px;
+        padding: 8px;
+    }
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+    .glyph-constellation-container {
+        background: linear-gradient(135deg, #000000 0%, #0f0f23 50%, #1a1a2e 100%);
+    }
+    
+    .glyph-tooltip {
+        background: rgba(0, 0, 0, 0.95);
+        border-color: rgba(75, 222, 128, 0.4);
+    }
+}
+
+/* Accessibility */
+.glyph-group:focus {
+    outline: 2px solid #4ade80;
+    outline-offset: 4px;
+}
+
+.glyph-tooltip:focus {
+    outline: 2px solid #4ade80;
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .glyph-sigil {
+        fill: #ffffff;
+        stroke: #000000;
+        stroke-width: 1;
+    }
+    
+    .glyph-name {
+        fill: #ffffff;
+        stroke: #000000;
+        stroke-width: 0.5;
+    }
+}

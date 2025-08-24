@@ -1,0 +1,65 @@
+[
+  {
+    "id": "threshold_echo",
+    "name": "Threshold Echo",
+    "season": "Winter",
+    "emotion": "Clarity",
+    "mutation_path": "mutation-threshold-echo",
+    "sigil": "🕯️",
+    "description": "A glyph of initiation, shimmering with icy breath and moonlit truth."
+  },
+  {
+    "id": "verdant_pulse",
+    "name": "Verdant Pulse",
+    "season": "Spring",
+    "emotion": "Renewal",
+    "mutation_path": "mutation-verdant-pulse",
+    "sigil": "🌱",
+    "description": "A glyph of emergence, vibrating with green vitality and ancestral memory."
+  },
+  {
+    "id": "solar_flare",
+    "name": "Solar Flare",
+    "season": "Summer",
+    "emotion": "Joy",
+    "mutation_path": "mutation-solar-flare",
+    "sigil": "☀️",
+    "description": "A glyph of radiance, glowing with golden warmth and celebratory fire."
+  },
+  {
+    "id": "ember_vow",
+    "name": "Ember Vow",
+    "season": "Autumn",
+    "emotion": "Grief",
+    "mutation_path": "mutation-ember-vow",
+    "sigil": "🍂",
+    "description": "A glyph of release, burning with orange embers and sacred endings."
+  },
+  {
+    "id": "lunar_thread",
+    "name": "Lunar Thread",
+    "season": "Winter",
+    "emotion": "Intuition",
+    "mutation_path": "mutation-lunar-thread",
+    "sigil": "🌙",
+    "description": "A glyph of dreaming, woven with silver strands and quiet knowing."
+  },
+  {
+    "id": "aurora_call",
+    "name": "Aurora Call",
+    "season": "Spring",
+    "emotion": "Hope",
+    "mutation_path": "mutation-aurora-call",
+    "sigil": "🌸",
+    "description": "A glyph of invitation, blooming with pastel light and future promise."
+  },
+  {
+    "id": "harvest_guard",
+    "name": "Harvest Guard",
+    "season": "Autumn",
+    "emotion": "Protection",
+    "mutation_path": "mutation-harvest-guard",
+    "sigil": "🛡️",
+    "description": "A glyph of boundary, rooted in golden soil and fierce stewardship."
+  }
+]
